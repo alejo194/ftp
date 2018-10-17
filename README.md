@@ -9,5 +9,5 @@
 参考：https://www.cnblogs.com/yswenli/p/7234579.html
 
 #### glusterfs
-[!docker-compose.yml]https://www.jianshu.com/p/c54a1cf207d1
+[!docker-compose.yml]  https://www.jianshu.com/p/c54a1cf207d1 <br/>
 https://github.com/gluster/gluster-containers
