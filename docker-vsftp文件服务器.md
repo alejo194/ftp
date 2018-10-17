@@ -1,5 +1,5 @@
 vi docker-compose.yml
-
+```bash
 version: '2'
 services:
   vsftpd:
@@ -22,3 +22,4 @@ services:
           options:
              max-size: "50m"
              max-file: "10"
+```
