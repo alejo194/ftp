@@ -1,4 +1,7 @@
-```bash
+注：73和74上vi /etc/hosts添加
+192.168.101.74  de9-74
+192.168.101.73  de9-73
+
 vi docker-compose.yml
 version: '2'
 services:
@@ -53,4 +56,4 @@ services:
           options:
              max-size: "50m"
              max-file: "10"
-```
+
