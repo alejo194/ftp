@@ -10,4 +10,5 @@
 
 #### glusterfs
 https://www.jianshu.com/p/c54a1cf207d1 (docker-compose.yml)<br/>
-https://github.com/gluster/gluster-containers
+https://github.com/gluster/gluster-containers<br/>
+https://www.cnblogs.com/huangyanqi/p/8406534.html
