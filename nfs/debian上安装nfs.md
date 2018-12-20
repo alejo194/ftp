@@ -1,7 +1,7 @@
-#### nfs-server
+### 1.nfs-server
 ```bash
 $ apt-get install nfs-kernel-server
-
+$ mkdir -p /mnt/nfs-1 && chmod 777 /mnt/nfs-1
 $ vi /etc/exports
   # /etc/exports: the access control list for filesystems which may be exported
   #               to NFS clients.  See exports(5).
@@ -36,4 +36,9 @@ $ exportfs -rv
 # nfsstat 命令显示关于 NFS 和到内核的远程过程调用（RPC）接口的统计信息
 $ nfsstat
 ```
-#### nfs-client
+### 2.nfs-client
+```bash
+$ apt-get install nfs-common
+$ mount 192.168.101.79:/mnt/nfs-1/ /mnt/nfs-01/
+$ umount  /mnt/nfs-01/
+```
