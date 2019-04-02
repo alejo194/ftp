@@ -9,7 +9,7 @@ docker volume create --driver local \
 客户端需要安装nf-common
 > apt install nfs-common
 
-测试用例：docker-compose.yml 在/var/maxwin下
+测试用例70上：docker-compose.yml 在/var/maxwin下
 ```bash
 version: '2'
 services:
