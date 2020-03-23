@@ -15,6 +15,7 @@ services:
       - PASV_ADDRESS=192.168.101.73 ##被动式
       - PASV_MIN_PORT=21100
       - PASV_MAX_PORT=21110
+      - FILE_OPEN_MODE=0777
     volumes:
       - ./vsftpd:/home/vsftpd
     logging:
