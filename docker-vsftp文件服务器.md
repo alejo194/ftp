@@ -24,6 +24,17 @@ services:
              max-size: "50m"
              max-file: "10"
 ```
+#### 创建一个新的ftp用户,ftp 登录到对应的/home/myuser路径下
+```bash
+Manually add a new FTP user to an existing container:
+
+docker exec -i -t vsftpd bash
+mkdir /home/vsftpd/myuser
+echo -e "myuser\nmypass" >> /etc/vsftpd/virtual_users.txt
+/usr/bin/db_load -T -t hash -f /etc/vsftpd/virtual_users.txt /etc/vsftpd/virtual_users.db
+exit
+docker restart vsftpd
+```
 另一个
 ```bash
 vi docker-compose.yaml
