@@ -1,0 +1,34 @@
+ftps:
+    container_name: ftps
+    image: maxwinch/ftps:v1.1
+    ports:
+      - "21221:21"
+      - "20:20"
+      - "60000-60010:60000-60010"
+    environment:
+      - APP_USER_NAME=adminpam
+      - APP_USER_PASSWD=adminpamXSW
+      - APP_UID=1000
+      - APP_GID=1000
+      - PASV_ADDRESS=x.x.x.x
+      - PASSV_MIN_PORT=60000
+      - PASSV_MAX_PORT=60010
+      - FORCE_REINIT_CONFIG=false
+      - USE_SSL=true
+      - APP_UMASK=002
+      - TZ=Asia/Ho_Chi_Minh
+      - SERVICE_20_IGNORE='true'
+      - SERVICE_21_NAME=ftps-server
+    labels:
+      ftpswip: "103.238.210.73"
+    volumes:
+      - ./ota/vedioEvent:/home/vsftpd/data
+      - ./ssl/server.pem:/usr/certs/cert.key:ro
+      - ./ssl/server.pem:/usr/certs/cert.crt:ro
+      - ./conf/vsftpd.conf:/etc/vsftpd/vsftpd.conf
+    restart: always
+    logging:
+       driver: "json-file"
+       options:
+         max-size: "50m"
+         max-file: "10"
