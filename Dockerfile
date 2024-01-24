@@ -2,7 +2,7 @@ FROM alpine:latest
 
 # Labels
 LABEL Description "Our goal is to create a simple, consistent, customizable and convenient image using official image" \
-	  maintainer "https://github.com/chonjay21"
+	  maintainer "https://github.com/alejo194/ftp/edit/master/Dockerfile"
 
 # Environment variables
 ENV FTPS_SOURCE_DIR=/sources/ftps \
